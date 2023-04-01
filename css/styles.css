@@ -138,11 +138,11 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid white;
 }
 .concluir p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-
 }
 
 /* Algumas classes para ajudar com o js */
@@ -152,4 +152,8 @@ footer{
 }
 .selecionado{
     border: 5px solid #32b72f;
+}
+.fecharPedido{
+    background-color: #32b72f;
+    font-weight: 700;
 }
