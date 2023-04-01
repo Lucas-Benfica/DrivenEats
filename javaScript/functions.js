@@ -5,6 +5,13 @@ let sobremesa = 0;
 function selecionarPrincipal(seletor){
     const jaSelecionado = document.querySelector('.menuPrincipal .selecionado');
 
+    const jaCheck = document.querySelector('.menuPrincipal .selecionado .ativado');
+
+    if(jaCheck!== null){
+        jaCheck.classList.remove('ativado');
+        jaCheck.classList.add('desativado');
+    }
+    
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('selecionado');
     }
@@ -12,18 +19,33 @@ function selecionarPrincipal(seletor){
     const selecionar = document.querySelector(seletor);
     selecionar.classList.toggle('selecionado');  
 
+    const check = document.querySelector('.menuPrincipal .selecionado .desativado');
+    check.classList.remove('desativado');
+    check.classList.add('ativado');
+
     principal = 1;
     liberarPedido();
 }
 
 function selecionarBebida(seletor){
     const jaSelecionado = document.querySelector('.menuBebidas .selecionado');
+
+    const jaCheck = document.querySelector('.menuBebidas .selecionado .ativado');
+
+    if(jaCheck!== null){
+        jaCheck.classList.remove('ativado');
+        jaCheck.classList.add('desativado');
+    }
+
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('selecionado');
     }
     const selecionar = document.querySelector(seletor);
-
     selecionar.classList.toggle('selecionado');   
+
+    const check = document.querySelector('.menuBebidas .selecionado .desativado');
+    check.classList.remove('desativado');
+    check.classList.add('ativado');
 
     bebida = 1;
     liberarPedido()
@@ -31,12 +53,24 @@ function selecionarBebida(seletor){
 
 function selecionarSobremesa(seletor){
     const jaSelecionado = document.querySelector('.menuSobremesas .selecionado');
+
+    const jaCheck = document.querySelector('.menuSobremesas .selecionado .ativado');
+
+    if(jaCheck!== null){
+        jaCheck.classList.remove('ativado');
+        jaCheck.classList.add('desativado');
+    }
+
     if(jaSelecionado !== null){
         jaSelecionado.classList.remove('selecionado');
     }
-    const selecionar = document.querySelector(seletor);
 
+    const selecionar = document.querySelector(seletor);
     selecionar.classList.toggle('selecionado');   
+
+    const check = document.querySelector('.menuSobremesas .selecionado .desativado');
+    check.classList.remove('desativado');
+    check.classList.add('ativado');
 
     sobremesa = 1;
     liberarPedido()
@@ -88,8 +122,3 @@ function fecharPedido(){
     
     window.location.href ="https://wa.me/5531988668067?text=" + txt;
 }
-/*Olá, gostaria de fazer o pedido:
-- Prato: Frango Yin Yang
-- Bebida: Coquinha Gelada
-- Sobremesa: Pudim
-Total: R$ 27,70*/

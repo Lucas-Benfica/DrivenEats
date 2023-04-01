@@ -156,7 +156,10 @@ a {
 
 /* Algumas classes para ajudar com o js */
 
-.displayNONE{
+.ativado{
+    display: inline-block;
+}
+.desativado{
     display: none;
 }
 .selecionado{
